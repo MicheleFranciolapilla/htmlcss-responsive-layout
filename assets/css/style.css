@@ -10,7 +10,7 @@
 --main_margin_tab: 5vw;
 --main_margin_lap: 10vw;
 --main_margin_desk: 20vw;
---section_flex_gap: 2.5rem;
+--section_flex_gap: 5vw;
 
 /******************************/
 
@@ -28,6 +28,9 @@
     color: white;
 }
 
+.b_rad_1{
+    border-radius: 1rem;
+}
 /****************************/
 
 /* Settore "HEADER" e "NAV"*/
@@ -67,24 +70,23 @@ nav{
 
 /* Settore "Section */
 #section_1{
-    margin-top: calc(2 * var(--header_height));
-    margin-bottom: calc(2 * var(--header_height));
+    margin: calc(2 * var(--header_height)) 0;
     padding: 0 var(--main_margin_mob);
     gap: var(--section_flex_gap);
 }
 
-#section_1 > .s_1_card, #section_1 > #s_1_wide_card{
+#section_1 .s_1_card, #section_1 > #s_1_wide_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--section_flex_gap);
     background-color: var(--s_1_cards_color);
-    border-radius: 1rem;
     padding: var(--section_flex_gap);
 }
 
-#section_1 > #s_1_wide_card > img{
-    width: 100%;
-}
-
 .s_1_card > a{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--s_1_icon_color);
 }
@@ -92,7 +94,6 @@ nav{
 .s_1_card .btn_normal{
     color: white;
     background-color: var(--s_1_icon_color);
-    margin: var(--section_flex_gap) 0;
 }
 
 .s_1_icon{
@@ -102,7 +103,6 @@ nav{
 }
 
 .s_1_card > p{
-    margin-top: var(--section_flex_gap);
     line-height: 1.5rem;
     color: #5A6E7F;
 }
@@ -115,6 +115,19 @@ nav{
     header, #section_1{
         padding: 0 var(--main_margin_tab);
     }
+
+    #section_1{
+        flex-flow: row wrap;
+    }
+
+    /* #section_1 > #s_1_wide_card{
+        flex-basis: ;
+    } */
+
+    /* #section_1 > .s_1_card{
+        flex-basis: calc(100% / 3);
+    } */
+
 }
 /**************************/
 
