@@ -361,7 +361,7 @@
     align-content: space-around;
 }
 
-/********** BLOCK UTILITIES **********/
+/********** BLOCK & TEXT UTILITIES **********/
 /* .center_text */
 /* .center_block */
 /* .width_80 */
@@ -378,7 +378,7 @@
 /* .padd_h_5 */
 /* .padd_h_10 */
 /* .padd_h_15 */
-/*************************************/
+/********************************************/
 
 .center_text{
     text-align: center;

@@ -6,14 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Link a Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Links ai fogli di stile -->
     <link rel="stylesheet" href="assets/css/reset_and_utilities.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
     <title>Responsive Layout</title>
 </head>
 
 <body>
+    <!-- Header in posizione fixed e sempre in primo piano -->
+    <header class="p_fixed_header">
+        <!-- Barra di navigazione flexbox -->
+        <nav class="d_flex flex_main_btw flex_cross_center">
+            <!-- Primo flex item (logo) sempre visibile -->
+            <img id="logo" src="assets/img/logo.png" alt="logo">
+            <!-- Secondo flex item (sandwich menu) visibile in modalità mobile e tablet-->
+            <a href="#" id="mob_tab_menu" class="reset_decor white_text">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+            <!-- Terzo flex item (menù) visibile solo in modalità laptop e desktop -->
+            <ul id="desktop_menu" class="d_flex flex_main_btw reset_list_style">
+                <li>
+                    <a href="#" class="reset_decor">Planning</a>
+                </li>
+                <li>
+                    <a href="#" class="reset_decor">Testimonials</a>
+                </li>
+                <li>
+                    <a href="#" class="reset_decor">Features</a>
+                </li>
+                <li>
+                    <a href="#" class="reset_decor">About Us</a>
+                </li>
+                <li>
+                    <a href="#" class="reset_decor btn_normal btn_pill ">Get started</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     
 </body>
 </html>
