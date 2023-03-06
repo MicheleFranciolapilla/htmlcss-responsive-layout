@@ -1,0 +1,44 @@
+/***************************************/
+/* FOGLIO DI STILE PER PULSANTI E MENU */
+/***************************************/
+
+/***************************************/
+/* .btn_fat */
+/* .btn_normal */
+/* .btn_slim */
+/* .btn_radius */
+/* .btn_pill */
+/***************************************/
+
+/* Pulsanti standard (con angoli squadrati) */
+/********************************************/
+
+/* Rapporto v/h: 1/1 */
+.btn_fat{
+    padding: 1rem 1rem;
+}
+
+/* Rapporto v/h: 1/2 */
+.btn_normal{
+    padding: 0.5rem 1rem;
+}
+
+/* Rapporto v/h: 1/4 */
+.btn_slim{
+    padding: 0.25rem 1rem;
+}
+/********************************************/
+
+/* Angoli non squadrati */
+/************************/
+
+/* Angoli arrotondati */
+.btn_radius{
+    border-radius: 0.5rem;
+}
+
+/* Pillola shape */
+.btn_pill{
+    border-radius: 1.5rem;
+}
+/************************/
