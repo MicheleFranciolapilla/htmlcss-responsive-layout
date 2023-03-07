@@ -6,12 +6,15 @@
 :root{
 /* VARIABILI DIMENSIONALI */
 --header_height: 10vh;
+/* le --main_margin_XXX danno la centratura della nav e delle sezioni */
 --main_margin_mob: 10vw;
 --main_margin_tab: 5vw;
---main_margin_lap: 10vw;
+/* --main_margin_lap: 10vw; */
 --main_margin_desk: 20vw;
+/* le --s_flex_gap_XXX settano il gap dei flexbox ed i padding all'interno delle sezioni */
 --s_flex_gap_mob: 5vw;
 --s_flex_gap_tab: 3vw;
+--s_flex_gap_desk: 2vw;
 
 /******************************/
 
@@ -55,7 +58,7 @@ nav{
 }
 
 #desktop_menu{
-    flex-basis: 65%;
+    flex-basis: 70%;
     display: none;
 }
 
@@ -107,6 +110,7 @@ nav{
 }
 
 .s_1_card > p{
+    text-align: center;
     line-height: 1.5rem;
     color: #5A6E7F;
 }
@@ -155,6 +159,10 @@ nav{
         padding: 0;
     }
 
+    #s_1_wide_card > .s_1_card > p{
+        text-align: left;
+    }
+
     .s_1_card > a{
         font-size: 1.1rem;
     }
@@ -174,8 +182,8 @@ nav{
 /* MEDIA QUERY PER LAPTOP & DESKTOP */
 @media screen and (min-width: 768px)
 {
-    header, #section_1{
-        padding: 0 var(--main_margin_lap);
+    header{
+        padding: 0 var(--main_margin_desk);
     }
 
     #mob_tab_menu{
@@ -184,19 +192,71 @@ nav{
 
     #desktop_menu{
         display: flex;
+        font-size: 0.75rem;
     }
+
+    #section_1{
+        margin: calc(2 * var(--header_height)) var(--main_margin_desk);
+        gap: var(--s_flex_gap_desk);
+    }
+
+    #section_1 > .s_1_card, #section_1 > #s_1_wide_card{
+        gap: var(--s_flex_gap_desk);
+        padding: var(--s_flex_gap_desk);
+    }
+
+    /* Solo cards discendenti dirette, non quella interna a s_1_wide_card */
+    #section_1 > .s_1_card{
+        width: calc((100% - (2 * var(--s_flex_gap_desk))) / 3);
+    }
+
+    #section_1 > #s_1_wide_card{
+        width: calc((((100% - (2 * var(--s_flex_gap_desk))) / 3) * 2) + var(--s_flex_gap_desk));
+    }
+
+    #section_1 > #s_1_wide_card{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+       /* align-items: flex-start; */
+    }
+
+    #section_1 > #s_1_wide_card img{
+        width: 40%;
+        align-self: flex-end;
+    }
+
+    #s_1_wide_card > .s_1_card{
+        flex-basis: 50%;
+        align-self: flex-start;
+        gap: var(--s_flex_gap_desk);
+        padding-bottom: var(--s_flex_gap_desk);
+    }
+
+    .s_1_card > a{
+        font-size: 1.3rem;
+        text-decoration: none;
+    }
+
+    .s_1_icon{
+        font-size: 4rem;
+        margin-bottom: var(--s_flex_gap_desk);
+    }
+    
+    .s_1_card > p{
+        line-height: 1rem;
+    }
+
 }
 /***************************/
 
 /* MEDIA QUERY PER DESKTOP */
 @media screen and (min-width: 1400px)
 {
-    header, #section_1{
-        padding: 0 var(--main_margin_desk);
-    }
-    
+
     #desktop_menu{
         flex-basis: 50%;
+        font-size: initial;
     }
 
 }
