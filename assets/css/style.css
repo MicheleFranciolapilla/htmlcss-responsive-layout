@@ -10,7 +10,8 @@
 --main_margin_tab: 5vw;
 --main_margin_lap: 10vw;
 --main_margin_desk: 20vw;
---section_flex_gap: 5vw;
+--s_flex_gap_mob: 5vw;
+--s_flex_gap_tab: 3vw;
 
 /******************************/
 
@@ -70,9 +71,8 @@ nav{
 
 /* Settore "Section */
 #section_1{
-    margin: calc(2 * var(--header_height)) 0;
-    padding: 0 var(--main_margin_mob);
-    gap: var(--section_flex_gap);
+    margin: calc(2 * var(--header_height)) var(--main_margin_mob);
+    gap: var(--s_flex_gap_mob);
 }
 
 #section_1 .s_1_card, #section_1 > #s_1_wide_card{
@@ -80,9 +80,13 @@ nav{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: var(--section_flex_gap);
+    gap: var(--s_flex_gap_mob);
     background-color: var(--s_1_cards_color);
-    padding: var(--section_flex_gap);
+    padding: var(--s_flex_gap_mob);
+}
+
+#section_1 > #s_1_wide_card img{
+    width: 100%;
 }
 
 .s_1_card > a{
@@ -99,7 +103,7 @@ nav{
 .s_1_icon{
     display: block;
     font-size: 5rem;
-    margin-bottom: var(--section_flex_gap);
+    margin-bottom: var(--s_flex_gap_mob);
 }
 
 .s_1_card > p{
@@ -112,22 +116,58 @@ nav{
 /* MEDIA QUERY PER TABLET */
 @media screen and (min-width: 480px)
 {
-    header, #section_1{
+    header{
         padding: 0 var(--main_margin_tab);
     }
 
     #section_1{
         flex-flow: row wrap;
+        margin: calc(2 * var(--header_height)) var(--main_margin_tab);
+        gap: var(--s_flex_gap_tab);
     }
 
-    /* #section_1 > #s_1_wide_card{
-        flex-basis: ;
-    } */
+    #section_1 > .s_1_card, #section_1 > #s_1_wide_card{
+        gap: var(--s_flex_gap_tab);
+        padding: var(--s_flex_gap_tab);
+        justify-content: flex-start;
+        align-items: stretch;
+    }
 
-    /* #section_1 > .s_1_card{
-        flex-basis: calc(100% / 3);
-    } */
+    /* Solo cards discendenti dirette, non quella interna a s_1_wide_card */
+    #section_1 > .s_1_card{
+        width: calc((100% - (2 * var(--s_flex_gap_tab))) / 3);
+    }
 
+    #section_1 > #s_1_wide_card{
+        width: calc((((100% - (2 * var(--s_flex_gap_tab))) / 3) * 2) + var(--s_flex_gap_tab));
+    }
+
+    #section_1 > #s_1_wide_card img{
+        width: 70%;
+    }
+
+    #section_1 > #s_1_wide_card *{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    #s_1_wide_card > .s_1_card{
+        padding: 0;
+    }
+
+    .s_1_card > a{
+        font-size: 1.1rem;
+    }
+
+    .s_1_icon{
+        font-size: 3rem;
+        margin-bottom: var(--s_flex_gap_tab);
+    }
+    
+    .s_1_card > p{
+        line-height: 1.1rem;
+    }
+    
 }
 /**************************/
 
