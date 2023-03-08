@@ -25,97 +25,94 @@
             <!-- Primo flex item (logo) sempre visibile -->
             <img id="logo" src="assets/img/logo.png" alt="logo">
             <!-- Secondo flex item (sandwich menu) visibile in modalità mobile e tablet-->
-            <a href="#" id="mob_tab_menu" class="reset_decor white_text">
+            <a href="#" id="mob_tab_menu" class="white_text">
                 <i class="fa-solid fa-bars"></i>
             </a>
             <!-- Terzo flex item (menù) visibile solo in modalità laptop e desktop -->
             <ul id="desktop_menu" class="d_flex flex_main_btw reset_list_style">
                 <li>
-                    <a href="#" class="reset_decor">Planning</a>
+                    <a href="#">Planning</a>
                 </li>
                 <li>
-                    <a href="#" class="reset_decor">Testimonials</a>
+                    <a href="#">Testimonials</a>
                 </li>
                 <li>
-                    <a href="#" class="reset_decor">Features</a>
+                    <a href="#">Features</a>
                 </li>
                 <li>
-                    <a href="#" class="reset_decor">About Us</a>
+                    <a href="#">About Us</a>
                 </li>
                 <li>
-                    <a href="#" class="reset_decor btn_normal btn_pill ">Get started</a>
+                    <a href="#" class="btn_normal btn_pill ">Get started</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- La prima sezione del main è un flexbox verticale -->
-        <section id="section_1" class="d_flex flex_column">
-            <!-- Il primo elemento della section 1 è la carta "ampia", flexbox, al cui interno ci sono una card classica (flexbox) con l'aggiunta di un pulsante e l'immagine -->
-            <!-- Card nr 1 (ampia) -->
-            <div id="s_1_wide_card" class="b_rad_1" style="padding-bottom: 0;">
-                <!-- Card classica con aggiunta di pulsante -->
-                <div class="s_1_card">
-                    <a href="#" c lass="reset_decor">Get a demo application</a>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, veritatis perspiciatis. Consectetur aut, cum hic ut ex impedit sit voluptate, dolorum quae quidem nisi! Pariatur non aliquam ullam quisquam?
-                    </p>
-                    <a href="#" class="reset_decor d_ib btn_normal btn_pill">
-                        <i class="fa-brands fa-apple"></i>
-                        App Store
-                    </a>
+        <section id="s1">
+            <div class="card_set d_flex flex_column">
+                <div id="s1_wide_card" class="d_flex flex_column flex_main_btw flex_cross_center b_rad_1" style="padding-bottom: 0;">
+                    <div class="s1_card d_flex flex_column flex_main_btw flex_cross_center">
+                        <a href="#">Get a demo application</a>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, veritatis perspiciatis. Consectetur aut, cum hic ut ex impedit sit voluptate, dolorum quae quidem nisi! Pariatur non aliquam ullam quisquam?
+                        </p>
+                        <a href="#" class="d_ib btn_normal btn_pill">
+                            <i class="fa-brands fa-apple"></i>
+                            App Store
+                        </a>
+                    </div>
+                    <img src="assets/img/phone.png" alt="phone image">
                 </div>
-                <img src="assets/img/phone.png" alt="phone image">
-            </div>
-            <!-- Di seguito ci sono le quattro cards classiche, tutte flexbox e a loro volta, discendenti dirette della section 1 -->
-            <!-- Card nr 2 -->
-            <div class="s_1_card b_rad_1">
-                <a href="#" class="reset_decor center_text">
-                    <span class="s_1_icon">
-                        <i class="fa-solid fa-file-code"></i>
-                    </span>
-                    <span>Clean Code</span>
-                </a>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut, cum hic ut ex impedit sit voluptate, dolorum quae quidem nisi! Pariatur non aliquam ullam quisquam?
-                </p>
-            </div>
-            <!-- Card nr 3 -->
-            <div class="s_1_card b_rad_1">
-                <a href="#" class="reset_decor center_text">
-                    <span class="s_1_icon">
-                        <i class="fa-solid fa-compass-drafting"></i>
-                    </span>
-                    <span>Web Design</span>
-                </a>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. A illo dolorum nihil autem perferendis saepe, cumque sunt quaerat excepturi commodi.
-                </p>
-            </div>
-            <!-- Card nr 4 -->
-            <div class="s_1_card b_rad_1">
-                <a href="#" class="reset_decor center_text">
-                    <span class="s_1_icon">
-                        <i class="fa-solid fa-laptop-code"></i>
-                    </span>
-                    <span>Development</span>
-                </a>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident sunt ad nobis corporis nisi itaque earum officiis obcaecati voluptatum.
-                </p>
-            </div>
-            <!-- Card nr 5 -->
-            <div class="s_1_card b_rad_1">
-                <a href="#" class="reset_decor center_text">
-                    <span class="s_1_icon">
-                        <i class="fa-solid fa-bullhorn"></i>
-                    </span>
-                    <span>Branding</span>
-                </a>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto asperiores ratione facilis neque labore iure quaerat tempora libero numquam hic, consectetur voluptatem! Asperiores ducimus distinctio doloribus eius omnis!
-                </p>
+                <!-- Card 1 -->
+                <div class="s1_card d_flex flex_column flex_main_btw flex_cross_center b_rad_1">
+                    <a href="#" class="center_text">
+                        <span class="s1_icon">
+                            <i class="fa-solid fa-file-code"></i>
+                        </span>
+                        <span>Clean Code</span>
+                    </a>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut, cum hic ut ex impedit sit voluptate, dolorum quae quidem nisi! Pariatur non aliquam ullam quisquam?
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="s1_card d_flex flex_column flex_main_btw flex_cross_center b_rad_1">
+                    <a href="#" class="center_text">
+                        <span class="s1_icon">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </span>
+                        <span>Web Design</span>
+                    </a>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. A illo dolorum nihil autem perferendis saepe, cumque sunt quaerat excepturi commodi.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="s1_card d_flex flex_column flex_main_btw flex_cross_center b_rad_1">
+                    <a href="#" class="center_text">
+                        <span class="s1_icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </span>
+                        <span>Development</span>
+                    </a>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident sunt ad nobis corporis nisi itaque earum officiis obcaecati voluptatum.
+                    </p>
+                </div>
+                <!-- Card 4 -->
+                <div class="s1_card d_flex flex_column flex_main_btw flex_cross_center b_rad_1">
+                    <a href="#" class="center_text">
+                        <span class="s1_icon">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </span>
+                        <span>Branding</span>
+                    </a>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto asperiores ratione facilis neque labore iure quaerat tempora libero numquam hic, consectetur voluptatem! Asperiores ducimus distinctio doloribus eius omnis!
+                    </p>
+                </div>
             </div>
         </section>
     </main>

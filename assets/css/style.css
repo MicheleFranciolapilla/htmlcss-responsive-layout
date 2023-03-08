@@ -1,5 +1,5 @@
 /*************************************************/
-/* STYLE.CSS - MOBILE FIRST (MAX WIDTH 480 PIXEL */
+/* STYLE.CSS - MOBILE FIRST (MAX WIDTH 499 PIXEL */
 /*************************************************/
 
 /* AREA DEFINIZIONE VARIABILI */
@@ -9,7 +9,6 @@
 /* le --main_margin_XXX danno la centratura della nav e delle sezioni */
 --main_margin_mob: 10vw;
 --main_margin_tab: 5vw;
-/* --main_margin_lap: 10vw; */
 --main_margin_desk: 20vw;
 /* le --s_flex_gap_XXX settano il gap dei flexbox ed i padding all'interno delle sezioni */
 --s_flex_gap_mob: 5vw;
@@ -24,6 +23,7 @@
 --menu_item_color: lightgray;
 --s_1_cards_color: #B5DDFF;
 --s_1_icon_color: #0084FD;
+--section_blue: #9792E4;
 }
 /******************************/
 
@@ -34,6 +34,14 @@
 
 .b_rad_1{
     border-radius: 1rem;
+}
+
+.b_rad_2{
+    border-radius: 2rem;
+}
+
+a{
+    text-decoration: none;
 }
 /****************************/
 
@@ -73,114 +81,132 @@ nav{
 /********************/
 
 /* Settore "Section */
-#section_1{
-    margin: calc(2 * var(--header_height)) var(--main_margin_mob);
+
+main > section:nth-child(even){
+    background-color: var(--section_blue);
+}
+
+main > section{
+    width: 100%;
+    padding: var(--header_height) var(--main_margin_mob);
+}
+
+main > section:first-child{
+    margin-top: var(--header_height);
+}
+
+main > section .d_flex{
     gap: var(--s_flex_gap_mob);
 }
 
-#section_1 .s_1_card, #section_1 > #s_1_wide_card{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+main > section a{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+main > section p{
+    line-height: 1.2rem;
+}
+
+#s1 > .card_set > .d_flex{
+    background-color: var(--s_1_cards_color);
+    padding: var(--s_flex_gap_mob);
+}
+
+#s1 > .card_set > #s1_wide_card .btn_normal{
+    color: white;
+    background-color: var(--s_1_icon_color);
+}
+
+#s1 > .card_set > #s1_wide_card > img{
+    width: 80%;
+}
+
+#s1 > .card_set .s1_card .s1_icon{
+    display: block;
+    margin-bottom: var(--s_flex_gap_mob);
+    font-size: 4rem;
+}
+
+/*
+#section_2 > .s_2_card{
+    background-color: white;
     gap: var(--s_flex_gap_mob);
     background-color: var(--s_1_cards_color);
     padding: var(--s_flex_gap_mob);
 }
 
-#section_1 > #s_1_wide_card img{
+#section_2 > .s_2_card > img{
     width: 100%;
 }
 
-.s_1_card > a{
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--s_1_icon_color);
-}
-
-.s_1_card .btn_normal{
-    color: white;
-    background-color: var(--s_1_icon_color);
-}
-
-.s_1_icon{
+#section_2 > .s_2_card > .circ_link{
     display: block;
-    font-size: 5rem;
-    margin-bottom: var(--s_flex_gap_mob);
-}
-
-.s_1_card > p{
+    color: black;
+    width: 3rem;
+    height: 3rem;
     text-align: center;
-    line-height: 1.5rem;
-    color: #5A6E7F;
+    line-height: 3rem;
+    font-size: 1rem;
+    background-color: var(--section_blue);
+    border-radius: 50%;
 }
-/***********************/
-/* SETTORE MEDIA QUERY */
 
+ */
 /* MEDIA QUERY PER TABLET */
-@media screen and (min-width: 480px)
+
+
+@media only screen and (min-width: 500px)
 {
     header{
         padding: 0 var(--main_margin_tab);
     }
 
-    #section_1{
-        flex-flow: row wrap;
-        margin: calc(2 * var(--header_height)) var(--main_margin_tab);
+    main > section{
+        padding-left: var(--main_margin_tab);
+        padding-right: var(--main_margin_tab);
+    }
+    
+    main > section .d_flex{
         gap: var(--s_flex_gap_tab);
     }
 
-    #section_1 > .s_1_card, #section_1 > #s_1_wide_card{
-        gap: var(--s_flex_gap_tab);
+    #s1 > .card_set{
+        flex-flow: row wrap;
+    }
+
+    #s1 > .card_set > .d_flex{
         padding: var(--s_flex_gap_tab);
         justify-content: flex-start;
-        align-items: stretch;
     }
 
-    /* Solo cards discendenti dirette, non quella interna a s_1_wide_card */
-    #section_1 > .s_1_card{
-        width: calc((100% - (2 * var(--s_flex_gap_tab))) / 3);
+    #s1 > .card_set > .s1_card{
+        flex-basis: calc((100% - (2 * var(--s_flex_gap_tab))) / 3);
     }
 
-    #section_1 > #s_1_wide_card{
-        width: calc((((100% - (2 * var(--s_flex_gap_tab))) / 3) * 2) + var(--s_flex_gap_tab));
-    }
-
-    #section_1 > #s_1_wide_card img{
-        width: 70%;
-    }
-
-    #section_1 > #s_1_wide_card *{
-        justify-content: flex-start;
+    #s1 > .card_set > #s1_wide_card{
+        flex-basis: calc((((100% - (2 * var(--s_flex_gap_tab))) / 3) * 2) + var(--s_flex_gap_tab));
         align-items: flex-start;
     }
 
-    #s_1_wide_card > .s_1_card{
-        padding: 0;
+    #s1 > .card_set > #s1_wide_card > .s1_card{
+        align-items: flex-start;
     }
 
-    #s_1_wide_card > .s_1_card > p{
-        text-align: left;
+    #s1 > .card_set > #s1_wide_card img{
+        width: 60%;
     }
 
-    .s_1_card > a{
-        font-size: 1.1rem;
-    }
-
-    .s_1_icon{
-        font-size: 3rem;
+    #s1 > .card_set .s1_card .s1_icon{
         margin-bottom: var(--s_flex_gap_tab);
     }
-    
-    .s_1_card > p{
-        line-height: 1.1rem;
-    }
-    
-}
+} 
 /**************************/
 
+
+
 /* MEDIA QUERY PER LAPTOP & DESKTOP */
-@media screen and (min-width: 768px)
+@media only screen and (min-width: 900px)
 {
     header{
         padding: 0 var(--main_margin_desk);
@@ -195,63 +221,47 @@ nav{
         font-size: 0.75rem;
     }
 
-    #section_1{
-        margin: calc(2 * var(--header_height)) var(--main_margin_desk);
+    main > section{
+        padding-left: var(--main_margin_desk);
+        padding-right: var(--main_margin_desk);
+    }
+    
+    main > section .d_flex{
         gap: var(--s_flex_gap_desk);
     }
 
-    #section_1 > .s_1_card, #section_1 > #s_1_wide_card{
-        gap: var(--s_flex_gap_desk);
+    #s1 > .card_set > .d_flex{
         padding: var(--s_flex_gap_desk);
     }
 
-    /* Solo cards discendenti dirette, non quella interna a s_1_wide_card */
-    #section_1 > .s_1_card{
-        width: calc((100% - (2 * var(--s_flex_gap_desk))) / 3);
+    #s1 > .card_set > .s1_card{
+        flex-basis: calc((100% - (2 * var(--s_flex_gap_desk))) / 3);
     }
 
-    #section_1 > #s_1_wide_card{
-        width: calc((((100% - (2 * var(--s_flex_gap_desk))) / 3) * 2) + var(--s_flex_gap_desk));
-    }
-
-    #section_1 > #s_1_wide_card{
+    #s1 > .card_set > #s1_wide_card{
+        flex-basis: calc((((100% - (2 * var(--s_flex_gap_desk))) / 3) * 2) + var(--s_flex_gap_desk));
         flex-direction: row;
-        justify-content: space-between;
-        gap: 0;
-       /* align-items: flex-start; */
+        justify-content: space-around;
     }
 
-    #section_1 > #s_1_wide_card img{
+    #s1 > .card_set > #s1_wide_card > .s1_card{
+        flex-basis: 70%;
+    }
+
+    #s1 > .card_set > #s1_wide_card > img{
         width: 40%;
         align-self: flex-end;
     }
 
-    #s_1_wide_card > .s_1_card{
-        flex-basis: 50%;
-        align-self: flex-start;
-        gap: var(--s_flex_gap_desk);
-        padding-bottom: var(--s_flex_gap_desk);
-    }
-
-    .s_1_card > a{
-        font-size: 1.3rem;
-        text-decoration: none;
-    }
-
-    .s_1_icon{
-        font-size: 4rem;
+    #s1 > .card_set .s1_card .s1_icon{
         margin-bottom: var(--s_flex_gap_desk);
     }
-    
-    .s_1_card > p{
-        line-height: 1rem;
-    }
-
 }
+
 /***************************/
 
 /* MEDIA QUERY PER DESKTOP */
-@media screen and (min-width: 1400px)
+@media only screen and (min-width: 1400px)
 {
 
     #desktop_menu{
@@ -260,5 +270,4 @@ nav{
     }
 
 }
-/***************************/
 /***************************/
