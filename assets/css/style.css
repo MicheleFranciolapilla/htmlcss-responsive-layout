@@ -128,20 +128,22 @@ main > section p{
     font-size: 4rem;
 }
 
-/*
-#section_2 > .s_2_card{
-    background-color: white;
-    gap: var(--s_flex_gap_mob);
-    background-color: var(--s_1_cards_color);
-    padding: var(--s_flex_gap_mob);
-}
-
-#section_2 > .s_2_card > img{
+#s2 > .card_set img{
     width: 100%;
+} 
+
+#s2 > .card_set > #strategic > h2, #s2 > .card_set > #strategic > p{
+    color: white;
+    margin-top: calc(var(--s_flex_gap_mob) * 2);
 }
 
-#section_2 > .s_2_card > .circ_link{
-    display: block;
+#s2 > .card_set > #app_dev{
+    background-color: white;
+    padding: var(--s_flex_gap_mob);
+    margin-top: var(--s_flex_gap_mob);
+}
+
+#s2 > .card_set > #app_dev > .circ_btn{
     color: black;
     width: 3rem;
     height: 3rem;
@@ -152,7 +154,7 @@ main > section p{
     border-radius: 50%;
 }
 
- */
+
 /* MEDIA QUERY PER TABLET */
 
 
@@ -199,6 +201,15 @@ main > section p{
 
     #s1 > .card_set .s1_card .s1_icon{
         margin-bottom: var(--s_flex_gap_tab);
+    }
+
+    #s2 > .card_set > #strategic > h2, #s2 > .card_set > #strategic > p{
+        margin-top: calc(var(--s_flex_gap_tab) * 2);
+    }
+    
+    #s2 > .card_set > #app_dev{
+        padding: var(--s_flex_gap_tab);
+        margin-top: var(--s_flex_gap_tab);
     }
 } 
 /**************************/
@@ -255,6 +266,26 @@ main > section p{
 
     #s1 > .card_set .s1_card .s1_icon{
         margin-bottom: var(--s_flex_gap_desk);
+    }
+
+    #s2 > .card_set{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #s2 > .card_set > #strategic > h2, #s2 > .card_set > #strategic > p{
+        margin-top: calc(var(--s_flex_gap_desk) * 2);
+    }
+    
+    #s2 > .card_set > #strategic{
+        flex-basis: 50%;
+    }
+
+    #s2 > .card_set > #app_dev{
+        flex-basis: 30%;
+        padding: var(--s_flex_gap_desk);
+        margin-top: var(--s_flex_gap_desk);
+        align-self: flex-end;
     }
 }
 
