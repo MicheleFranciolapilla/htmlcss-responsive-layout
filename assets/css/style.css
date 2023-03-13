@@ -191,10 +191,6 @@ main > section p
     background-color: var(--section_blue);
 }
 
-#s3 > #testimonials > .card_set > .s3_card > .card_photo
-{
-}
-
 #s3 > #testimonials > .card_set > .s3_card > .card_photo > img
 {
     width: 40vw;
@@ -281,6 +277,24 @@ main > section p
         padding: var(--s_flex_gap_tab);
         margin-top: var(--s_flex_gap_tab);
     }
+
+    #s3 > #testimonials > .card_set > .s3_card
+    {
+        padding: var(--s_flex_gap_tab);
+        flex-direction: row;
+    }
+
+    #s3 > #testimonials > .card_set > .s3_card > .card_photo > img
+    {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    #s3 > #testimonials > .card_set > .s3_card > .card_text
+    {
+        text-align: left;
+    }
+
 } 
 /**************************/
 
@@ -371,6 +385,17 @@ main > section p
         padding: var(--s_flex_gap_desk);
         margin-top: var(--s_flex_gap_desk);
         align-self: flex-end;
+    }
+
+    #s3 > #testimonials > .card_set > .s3_card
+    {
+        padding: var(--s_flex_gap_desk);
+    }
+
+    #s3 > #testimonials > .card_set > .s3_card > .card_photo > img
+    {
+        width: 15vw;
+        height: 15vw;
     }
 }
 
