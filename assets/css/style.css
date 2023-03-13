@@ -205,7 +205,41 @@ main > section p
     margin-bottom: 2rem;
 }
 
+#s4 > .card_set
+{
+    padding-top: var(--header_height);
+}
 
+#s4 > .card_set > .s4_card
+{
+    padding: var(--s_flex_gap_mob);
+    flex-basis: 100%;
+    background-color: white;
+    align-self: stretch;
+}
+
+#s4 > .card_set > .s4_card > h3
+{
+    color: var(--section_blue);
+    font-size: 3rem;
+}
+
+#s4 > .card_set > .s4_card > h4
+{
+    color: var(--section_blue);
+    font-size: 1rem;
+}
+
+#s4 > .card_set > .s4_card > p
+{
+    line-height: 1.5rem;
+}
+
+#s4 > .card_set > .s4_card > .btn_slim
+{
+    color: white;
+    background-color: var(--section_blue);
+}
 
 
 
@@ -294,6 +328,13 @@ main > section p
     {
         text-align: left;
     }
+
+    #s4 > .card_set > .s4_card
+    {
+        padding: var(--s_flex_gap_tab);
+        flex-basis: calc((100% - var(--s_flex_gap_tab)) / 2);
+    }
+    
 
 } 
 /**************************/
@@ -397,6 +438,13 @@ main > section p
         width: 15vw;
         height: 15vw;
     }
+
+    #s4 > .card_set > .s4_card
+    {
+        padding: var(--s_flex_gap_desk);
+        flex-basis: calc((100% - (2 * var(--s_flex_gap_desk))) / 3);
+    }
+
 }
 
 /***************************/
