@@ -300,8 +300,36 @@ main > section p
     color: white;
 } */
 
+#s6 > #cta_box > span
+{
+    color: lightgrey;
+}
 
+#s6 > #cta_box > h2
+{
+    color: yellowgreen;
+}
 
+#s6 > #cta_box > ul > li
+{
+    font-size: 1rem;
+}
+
+footer
+{
+    background-color: black;
+}
+
+footer p
+{
+    padding: 2rem;
+}
+
+footer a
+{
+    color: var(--section_blue);
+    text-decoration: underline;
+}
 
 /* MEDIA QUERY PER TABLET */
 
