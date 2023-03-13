@@ -241,6 +241,55 @@ main > section p
     background-color: var(--section_blue);
 }
 
+#s5 > #about_us > #about_us_left > h2
+{
+    color: var(--section_blue);
+}
+
+#s5 > #about_us > #about_us_left > p
+{
+    line-height: 1.3;
+    margin: var(--s_flex_gap_mob) 0;
+}
+
+#s5 > #about_us > #about_us_right
+{
+    padding: var(--s_flex_gap_mob) 0;
+}
+
+#s5 > #about_us > #about_us_right > div.p_rel
+{
+    width: 60%;
+}
+
+#s5 > #about_us > #about_us_right > div.p_rel > img
+{
+    width: 100%;
+    border-radius: 50%;
+}
+
+#s5 > #about_us > #about_us_right > div.p_rel > i
+{
+    color: var(--section_blue);
+    font-size: 5rem;
+}
+
+#s5 > #about_us > #about_us_right > strong
+{
+    color: var(--section_blue);
+    line-height: 2rem;
+    font-size: 2rem;
+}
+
+#s5 > #about_us > #about_us_right > a
+{
+    display: inline-block;
+    width: 60%;
+    background-color: var(--section_blue);
+    color: white;
+}
+
+
 
 
 /* MEDIA QUERY PER TABLET */
