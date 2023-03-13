@@ -3,7 +3,8 @@
 /*************************************************/
 
 /* AREA DEFINIZIONE VARIABILI */
-:root{
+:root
+{
 /* VARIABILI DIMENSIONALI */
 --header_height: 10vh;
 /* le --main_margin_XXX danno la centratura della nav e delle sezioni */
@@ -28,53 +29,64 @@
 /******************************/
 
 /* Settore classi generiche */
-.white_text{
+.white_text
+{
     color: white;
 }
 
-.b_rad_1{
+.b_rad_1
+{
     border-radius: 1rem;
 }
 
-.b_rad_2{
+.b_rad_2
+{
     border-radius: 2rem;
 }
 
-a{
+a
+{
     text-decoration: none;
 }
 /****************************/
 
 /* Settore "HEADER" e "NAV"*/
-header{
+header
+{
     height: var(--header_height);
     padding: 0 var(--main_margin_mob);
     background-color: var(--header_color);
 }
 
-nav{
+nav
+{
     width: 100%;
     height: 100%;
 }
 
-#logo{
+#logo
+{
     max-height: 80%;
 }
 
-#mob_tab_menu{
+#mob_tab_menu
+{
     display: inline-block;
 }
 
-#desktop_menu{
+#desktop_menu
+{
     flex-basis: 70%;
     display: none;
 }
 
-#desktop_menu a{
+#desktop_menu a
+{
     color: var(--menu_item_color);
 }
 
-#desktop_menu .btn_normal{
+#desktop_menu .btn_normal
+{
     background-color: white;
     color: black
 }
@@ -82,68 +94,82 @@ nav{
 
 /* Settore "Section */
 
-main > section:nth-child(even){
+main > section:nth-child(even)
+{
     background-color: var(--section_blue);
 }
 
-main > section{
+main > section
+{
     width: 100%;
     padding: var(--header_height) var(--main_margin_mob);
 }
 
-main > section:first-child{
+main > section:first-child
+{
     margin-top: var(--header_height);
 }
 
-main > section .d_flex{
+main > section .d_flex
+{
     gap: var(--s_flex_gap_mob);
 }
 
-main > section a{
+main > section a
+{
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-main > section p{
+main > section p
+{
     line-height: 1.2rem;
 }
 
-#s1 > .card_set > .d_flex{
+#s1 > .card_set > .d_flex
+{
     background-color: var(--s_1_cards_color);
     padding: var(--s_flex_gap_mob);
 }
 
-#s1 > .card_set > #s1_wide_card .btn_normal{
+#s1 > .card_set > #s1_wide_card .btn_normal
+{
     color: white;
     background-color: var(--s_1_icon_color);
 }
 
-#s1 > .card_set > #s1_wide_card > img{
+#s1 > .card_set > #s1_wide_card > img
+{
     width: 80%;
 }
 
-#s1 > .card_set .s1_card .s1_icon{
+#s1 > .card_set .s1_card .s1_icon
+{
     display: block;
     margin-bottom: var(--s_flex_gap_mob);
     font-size: 4rem;
 }
 
-#s2 > .card_set img{
+#s2 > .card_set img
+{
     width: 100%;
 } 
 
-#s2 > .card_set > #strategic > h2, #s2 > .card_set > #strategic > p{
+#s2 > .card_set > #strategic > h2, #s2 > .card_set > #strategic > p
+{
     color: white;
     margin-top: calc(var(--s_flex_gap_mob) * 2);
 }
 
-#s2 > .card_set > #app_dev{
+#s2 > .card_set > #app_dev
+{
     background-color: white;
     padding: var(--s_flex_gap_mob);
     margin-top: var(--s_flex_gap_mob);
 }
 
-#s2 > .card_set > #app_dev > .circ_btn{
+#s2 > .card_set > #app_dev > .circ_btn
+{
     color: black;
     width: 3rem;
     height: 3rem;
@@ -154,60 +180,104 @@ main > section p{
     border-radius: 50%;
 }
 
+#s3 > #testimonials > h2
+{
+    color: var(--s_1_icon_color);
+}
+
+#s3 > #testimonials > .card_set > .s3_card
+{
+    padding: var(--s_flex_gap_mob);
+    background-color: var(--section_blue);
+}
+
+#s3 > #testimonials > .card_set > .s3_card > .card_photo
+{
+}
+
+#s3 > #testimonials > .card_set > .s3_card > .card_photo > img
+{
+    width: 40vw;
+    height: 40vw;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#s3 > #testimonials p
+{
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
 
 /* MEDIA QUERY PER TABLET */
 
 
 @media only screen and (min-width: 500px)
 {
-    header{
+    header
+    {
         padding: 0 var(--main_margin_tab);
     }
 
-    main > section{
+    main > section
+    {
         padding-left: var(--main_margin_tab);
         padding-right: var(--main_margin_tab);
     }
     
-    main > section .d_flex{
+    main > section .d_flex
+    {
         gap: var(--s_flex_gap_tab);
     }
 
-    #s1 > .card_set{
+    #s1 > .card_set
+    {
         flex-flow: row wrap;
     }
 
-    #s1 > .card_set > .d_flex{
+    #s1 > .card_set > .d_flex
+    {
         padding: var(--s_flex_gap_tab);
         justify-content: flex-start;
     }
 
-    #s1 > .card_set > .s1_card{
+    #s1 > .card_set > .s1_card
+    {
         flex-basis: calc((100% - (2 * var(--s_flex_gap_tab))) / 3);
     }
 
-    #s1 > .card_set > #s1_wide_card{
+    #s1 > .card_set > #s1_wide_card
+    {
         flex-basis: calc((((100% - (2 * var(--s_flex_gap_tab))) / 3) * 2) + var(--s_flex_gap_tab));
         align-items: flex-start;
     }
 
-    #s1 > .card_set > #s1_wide_card > .s1_card{
+    #s1 > .card_set > #s1_wide_card > .s1_card
+    {
         align-items: flex-start;
     }
 
-    #s1 > .card_set > #s1_wide_card img{
+    #s1 > .card_set > #s1_wide_card img
+    {
         width: 60%;
     }
 
-    #s1 > .card_set .s1_card .s1_icon{
+    #s1 > .card_set .s1_card .s1_icon
+    {
         margin-bottom: var(--s_flex_gap_tab);
     }
 
-    #s2 > .card_set > #strategic > h2, #s2 > .card_set > #strategic > p{
+    #s2 > .card_set > #strategic > h2, #s2 > .card_set > #strategic > p
+    {
         margin-top: calc(var(--s_flex_gap_tab) * 2);
     }
     
-    #s2 > .card_set > #app_dev{
+    #s2 > .card_set > #app_dev
+    {
         padding: var(--s_flex_gap_tab);
         margin-top: var(--s_flex_gap_tab);
     }
@@ -219,69 +289,84 @@ main > section p{
 /* MEDIA QUERY PER LAPTOP & DESKTOP */
 @media only screen and (min-width: 900px)
 {
-    header{
+    header
+    {
         padding: 0 var(--main_margin_desk);
     }
 
-    #mob_tab_menu{
+    #mob_tab_menu
+    {
         display: none;
     }
 
-    #desktop_menu{
+    #desktop_menu
+    {
         display: flex;
         font-size: 0.75rem;
     }
 
-    main > section{
+    main > section
+    {
         padding-left: var(--main_margin_desk);
         padding-right: var(--main_margin_desk);
     }
     
-    main > section .d_flex{
+    main > section .d_flex
+    {
         gap: var(--s_flex_gap_desk);
     }
 
-    #s1 > .card_set > .d_flex{
+    #s1 > .card_set > .d_flex
+    {
         padding: var(--s_flex_gap_desk);
     }
 
-    #s1 > .card_set > .s1_card{
+    #s1 > .card_set > .s1_card
+    {
         flex-basis: calc((100% - (2 * var(--s_flex_gap_desk))) / 3);
     }
 
-    #s1 > .card_set > #s1_wide_card{
+    #s1 > .card_set > #s1_wide_card
+    {
         flex-basis: calc((((100% - (2 * var(--s_flex_gap_desk))) / 3) * 2) + var(--s_flex_gap_desk));
         flex-direction: row;
         justify-content: space-around;
     }
 
-    #s1 > .card_set > #s1_wide_card > .s1_card{
+    #s1 > .card_set > #s1_wide_card > .s1_card
+    {
         flex-basis: 70%;
     }
 
-    #s1 > .card_set > #s1_wide_card > img{
+    #s1 > .card_set > #s1_wide_card > img
+    {
         width: 40%;
         align-self: flex-end;
     }
 
-    #s1 > .card_set .s1_card .s1_icon{
+    #s1 > .card_set .s1_card .s1_icon
+    {
         margin-bottom: var(--s_flex_gap_desk);
     }
 
-    #s2 > .card_set{
+    #s2 > .card_set
+    {
         flex-direction: row;
         justify-content: space-around;
     }
 
-    #s2 > .card_set > #strategic > h2, #s2 > .card_set > #strategic > p{
+    #s2 > .card_set > #strategic > h2, #s2 > .card_set > #strategic > p
+    {
         margin-top: calc(var(--s_flex_gap_desk) * 2);
     }
     
-    #s2 > .card_set > #strategic{
+    #s2 > .card_set > #strategic
+    {
         flex-basis: 50%;
     }
 
-    #s2 > .card_set > #app_dev{
+    #s2 > .card_set > #app_dev
+    {
         flex-basis: 30%;
         padding: var(--s_flex_gap_desk);
         margin-top: var(--s_flex_gap_desk);
@@ -295,7 +380,8 @@ main > section p{
 @media only screen and (min-width: 1400px)
 {
 
-    #desktop_menu{
+    #desktop_menu
+    {
         flex-basis: 50%;
         font-size: initial;
     }
