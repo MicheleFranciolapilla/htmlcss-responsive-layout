@@ -48,6 +48,7 @@ a
 {
     text-decoration: none;
 }
+
 /****************************/
 
 /* Settore "HEADER" e "NAV"*/
@@ -69,11 +70,13 @@ nav
     max-height: 80%;
 }
 
+/* Menu a sandwich, attivo nelle versioni mobile e tablet */
 #mob_tab_menu
 {
     display: inline-block;
 }
 
+/* Menu esteso, attivo nella versione laptop/desktop */
 #desktop_menu
 {
     flex-basis: 70%;
@@ -94,22 +97,26 @@ nav
 
 /* Settore "Section */
 
+/* Alternanza dei colori di sfondo delle sezioni */
 main > section:nth-child(even)
 {
     background-color: var(--section_blue);
 }
 
+/* Centratura delle sezioni (uguale per tutte) a seconda del device */
 main > section
 {
     width: 100%;
     padding: var(--header_height) var(--main_margin_mob);
 }
 
+/* Margine superiore della prima sezione a riempire lo spazio sotto lo header (fixed) */
 main > section:first-child
 {
     margin-top: var(--header_height);
 }
 
+/* Applicazione del medesimo gap a tutti i flexbox delle sezioni, con valore dipendente dal device */
 main > section .d_flex
 {
     gap: var(--s_flex_gap_mob);
@@ -126,6 +133,7 @@ main > section p
     line-height: 1.2rem;
 }
 
+/* Settore relativo alla prima sezione */
 #s1 > .card_set > .d_flex
 {
     background-color: var(--s_1_cards_color);
@@ -150,6 +158,7 @@ main > section p
     font-size: 4rem;
 }
 
+/* Settore relativo alla seconda sezione */
 #s2 > .card_set img
 {
     width: 100%;
@@ -180,6 +189,7 @@ main > section p
     border-radius: 50%;
 }
 
+/* Settore relativo alla terza sezione */
 #s3 > #testimonials > h2
 {
     color: var(--s_1_icon_color);
@@ -205,6 +215,7 @@ main > section p
     margin-bottom: 2rem;
 }
 
+/* Settore relativo alla quarta sezione */
 #s4 > .card_set
 {
     padding-top: var(--header_height);
@@ -241,6 +252,7 @@ main > section p
     background-color: var(--section_blue);
 }
 
+/* Settore relativo alla quinta sezione */
 #5 > #about_us 
 {
     gap: var(--s_flex_gap_mob);
@@ -292,14 +304,16 @@ main > section p
     font-size: 2rem;
 }
 
-/* #s5 > #about_us > #about_us_right > a
+#s5 > #about_us > #about_us_right > a
 {
-    display: inline-block;
-    width: 60%;
+    font-size: 1rem;
+    text-align: center;
+    max-width: 80%;
     background-color: var(--section_blue);
     color: white;
-} */
+}
 
+/* Settore relativo alla sesta sezione */
 #s6 > #cta_box > span
 {
     color: lightgrey;
@@ -310,11 +324,18 @@ main > section p
     color: yellowgreen;
 }
 
-#s6 > #cta_box > ul > li
+#s6 > #cta_box > a.btn_normal
+{
+    color: var(--section_blue);
+    background-color: white;
+}
+
+#s6 > #cta_box > ul > li *
 {
     font-size: 1rem;
 }
 
+/* Settore footer */
 footer
 {
     background-color: black;
@@ -331,9 +352,9 @@ footer a
     text-decoration: underline;
 }
 
+/**************************/
 /* MEDIA QUERY PER TABLET */
-
-
+/**************************/
 @media only screen and (min-width: 500px)
 {
     header
@@ -474,14 +495,6 @@ footer a
         font-size: 1rem;
     }
 
-    /* #s5 > #about_us > #about_us_right > a
-    {
-        display: inline-block;
-        width: 60%;
-        background-color: var(--section_blue);
-        color: white;
-    } */
-
     #s5 > #about_us
     {
         gap: var(--s_flex_gap_desk);
@@ -518,9 +531,9 @@ footer a
 } 
 /**************************/
 
-
-
+/************************************/
 /* MEDIA QUERY PER LAPTOP & DESKTOP */
+/************************************/
 @media only screen and (min-width: 900px)
 {
     header
@@ -659,10 +672,11 @@ footer a
         font-size: 1rem;
     }
 }
-
 /***************************/
 
+/***************************/
 /* MEDIA QUERY PER DESKTOP */
+/***************************/
 @media only screen and (min-width: 1400px)
 {
 
@@ -674,3 +688,32 @@ footer a
 
 }
 /***************************/
+
+/*****************/
+/* EFFETTI HOVER */
+/*****************/
+#logo:hover
+{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#mob_tab_menu:hover
+{
+    opacity: 0.5;
+}
+
+#desktop_menu > li:hover a
+{
+    color: yellow;
+}
+
+.btn_pill:hover
+{
+    opacity: 0.7;
+}
+
+.circ_btn:hover i
+{
+    color: yellow;
+}

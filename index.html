@@ -29,6 +29,7 @@
                 <i class="fa-solid fa-bars"></i>
             </a>
             <!-- Terzo flex item (menù) visibile solo in modalità laptop e desktop -->
+            <!-- Il click sui menu items rimanda alle relative sezioni -->
             <ul id="desktop_menu" class="d_flex flex_main_btw reset_list_style">
                 <li>
                     <a href="#s2">Planning</a>
@@ -43,15 +44,19 @@
                     <a href="#s5">About Us</a>
                 </li>
                 <li>
-                    <a href="#" class="btn_normal btn_pill ">Get started</a>
+                    <a href="#s6" class="btn_normal btn_pill ">Get started</a>
                 </li>
             </ul>
         </nav>
     </header>
 
+    <!-- Tutte le sezioni, ad esclusione del footer, sono incluse nel main -->
     <main>
+        <!-- S1 e' la sezione che raccoglie tutte le cards del primo blocco -->
         <section id="s1">
+            <!-- Contenitore flexbox che ingloba le cards -->
             <div class="card_set d_flex flex_column">
+                <!-- Prima card, ampia, che racchiude la img del telefono -->
                 <div id="s1_wide_card" class="d_flex flex_column flex_main_btw flex_cross_center b_rad_1" style="padding-bottom: 0;">
                     <div class="s1_card d_flex flex_column flex_main_btw flex_cross_center">
                         <a href="#">Get a demo application</a>
@@ -65,6 +70,7 @@
                     </div>
                     <img src="assets/img/phone.png" alt="phone image">
                 </div>
+                <!-- Cards standard -->
                 <!-- Card 1 -->
                 <div class="s1_card d_flex flex_column flex_main_btw flex_cross_center b_rad_1">
                     <a href="#" class="center_text">
@@ -115,6 +121,7 @@
                 </div>
             </div>
         </section>
+        <!-- Seconda sezione: immagini, testo e pulsante -->
         <section id="s2">
             <div class="card_set d_flex flex_column">
                 <div id="strategic">
@@ -130,12 +137,14 @@
                     <p class="center_text">
                        Develop an on-demand app for your delivery business to reach your targeted customers without any interruption. 
                     </p>
+                    <!-- Pulsante circolare -->
                     <a href="#" class="d_ib circ_btn center_text">
                         <i class="fa-solid fa-arrow-down"></i>
                     </a>
                 </div>
             </div>
         </section>
+        <!-- S3 racchiude i testi della sezione e le cards dei testimonials -->
         <section id="s3">
             <div id="testimonials" class="d_flex flex_column flex_cross_center center_text">
                 <span>TESTIMONIALS</span>
@@ -143,6 +152,7 @@
                 <p>
                     We place huge value on strong relationships and have seen the benefit they bring to our business. Customer feedback is vital in helping us to get it right.
                 </p>
+                <!-- Raccoglitore delle cards -->
                 <div class="card_set d_flex flex_column">
                     <!-- Card 1 -->
                     <div class="s3_card d_flex flex_column flex_cross_center b_rad_2">
@@ -189,6 +199,7 @@
                 </div>
             </div>
         </section>
+        <!-- S4 comprende il titolo della sezione e il contenitore delle cards con testo e pulsante -->
         <section id="s4">
             <h2 class="white_text center_text">Benefits of working with us</h2>
             <div class="card_set d_flex flex_wrap flex_main_center">
@@ -248,8 +259,10 @@
                 </div>
             </div>
         </section>
+        <!-- S5 presenta un testo lungo ed un blocco con foto/testo/pulsante -->
         <section id="s5">
             <div id="about_us" class="d_flex flex_wrap flex_main_btw">
+                <!-- Blocco del testo lungo -->
                 <div id="about_us_left">
                     <h2>About Us</h2>
                     <p>
@@ -261,6 +274,7 @@
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium at quaerat architecto quasi ad deleniti ipsum. Labore, odit! Explicabo magnam sint illo omnis fugiat aliquam eos aut mollitia perferendis provident.
                     </p>
                 </div>
+                <!-- Blocco con foto/testo/pulsante. Allineato sotto il precedente nella modalita' mobile, affiancato nelle modalita' tablet e desktop -->
                 <div id="about_us_right" class="d_flex flex_column">
                     <div class="p_rel">
                         <img src="assets/img/about.jpg" alt="about us photo">
@@ -275,6 +289,7 @@
                 </div>
             </div>
         </section>
+        <!-- Sezione della call to action, con testo, pulsante e link -->
         <section id="s6">
             <div id="cta_box" class="d_flex flex_column flex_cross_center center_text">
                 <span>GET STARTED</span>
@@ -284,7 +299,7 @@
                     We're still in beta and we will be for awhile.
                     As we add more functionality, we'll look into other plans with more controls.
                 </p>
-                <a href="#">Get Started</a>
+                <a href="#" class="btn_normal btn_pill">Get Started</a>
                 <ul class="white_text">
                     <li>Copyright 2023 Boolean</li>
                     <li>Classe 93</li>
@@ -295,6 +310,7 @@
             </div>
         </section>
     </main>
+    <!-- Footer con testo e links -->
     <footer>
         <div class="width_50 center_block center_text white_text">
             <p>
